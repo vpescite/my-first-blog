@@ -11,5 +11,13 @@
       <p>
           <em>It works!</em></p>
       <p> And now what to write??? </p>
+      <div>
+        {% for post in posts %}
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+          {% endfor %}
+
   </body>
 </html>
